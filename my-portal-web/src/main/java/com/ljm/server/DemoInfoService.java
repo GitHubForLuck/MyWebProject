@@ -1,6 +1,7 @@
 package com.ljm.server;
 
 import com.ljm.domain.DemoInfo;
+import javassist.NotFoundException;
 
 /**
  * @Project MyWebProject
@@ -12,10 +13,18 @@ import com.ljm.domain.DemoInfo;
  **/
 public interface DemoInfoService {
 
-    DemoInfo findById(long id);
+    DemoInfo findById(Long id);
 
-    void deleteFromCache(long id);
+    void deleteFromCache(Long id);
 
     void test();
+
+    DemoInfo findById2(Long id);
+
+    void delete(Long id);
+
+    DemoInfo update(DemoInfo update) throws NotFoundException;
+
+    DemoInfo save(DemoInfo demoInfo);
 
 }

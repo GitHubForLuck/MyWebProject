@@ -5,6 +5,7 @@ import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.ClassPathResource;
 
 /**
@@ -21,9 +22,13 @@ public class CacheConfiguration {
 
     /**
      *  ehcache主要的管理器
+     *  学习spring boot 时整合了redis再整合ehcahe是报
+     *  No CacheResolver specified, and no unique bean of type CacheManager found的错,
+     *  CacheManager 不唯一,各种百度之后发现是要在一个RedisCacheConfig的CacheManager 上加上@Primary，或CacheConfiguration的EhCacheCacheManager上加上@Primary
      * @param bean
      * @return
      */
+    @Primary
     @Bean
     public EhCacheCacheManager ehCacheCacheManager(EhCacheManagerFactoryBean bean){
         System.out.println("CacheConfiguration.ehCacheCacheManager()");
