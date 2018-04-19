@@ -1,5 +1,6 @@
 package com.ljm.config;
 
+import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;

@@ -1,0 +1,115 @@
+#uploaderWin{
+	width: 635px;
+	height: 0px;
+	left: auto;
+	top: auto;
+	right: 30px;
+	bottom: 0;
+	background-repeat: no-repeat;
+	position: fixed;
+	font-family:"HelveticaNeue","Helvetica-Neue", "Helvetica", "Arial", sans-serif;
+	background:#F0F0F0 url(../images/modal-gloss.png) no-repeat 0px 0px;
+	font:12px/1.5 tahoma,arial,"����";
+	border-width: 0 1px 1px;
+	border:0px solid #6d7a89;
+	border-radius:2px;
+	box-shadow: #666 0px 0px 5px;
+}
+#uploaderWin_head{
+	width: 100%;
+	height: 39px;
+	background: url(../images/sprite_n1_ccdf642.png) 0 0;
+}
+#uploaderMsg{
+	width: 623px;
+	background-color: #F8EBBF;
+	padding-left: 10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin: 0 auto;
+}
+#uploaderMsg #uploaderMsg_icon{
+	position: relative;
+	width: 22px;
+	height: 20px;
+	float: left;
+	background: url(../images/btn_icon.gif) 0 -248px no-repeat;
+}
+#uploaderWin_btn{
+	clear:both;
+	position:relative;
+	top:12px;
+}
+#uploaderWin_btn div{
+	position: absolute;
+	float: left;
+	cursor: pointer;
+}
+#uploaderWin_btn #uploadDialogCloseTop{
+	background: url(../images/sprite_n1_ccdf642.png) 0 0 no-repeat;
+	background-position: 0 -177px;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 0;
+}
+#uploaderWin_btn #uploadDialogCloseMinimumTop{
+	background: url(../images/sprite_n1_ccdf642.png) 0 0 no-repeat;
+	background-position: 0 -162px;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 0;
+}
+#uploaderWin_btn #uploadDialogHeadline{left: 15px;font-weight: 700px;font-size: 14px;color: #FFF;position: relative;bottom:3px;}
+#uploaderWin_btn #uploadDialogCloseMinimumTop{left: 575px; }
+#uploaderWin_btn #uploadDialogCloseTop{left: 605px; }
+
+
+#uploaderWin #picker{width: 100%;height: 38px; }
+#uploaderWin #theList{width: 100%;height: 308px;overflow: auto;overflow-x:hidden;  }
+
+
+#uploaderWin #theList .item{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #d2d2d2;
+	position: relative;
+}
+#uploaderWin #theList .item div{
+	float: left;
+	position: relative;
+	top:10px;
+	text-indent: 10px;
+}
+#uploaderWin #theList .item .fileDiv .fileName{width: 210px;display: inline-block;position: relative;left: -15px; }
+#uploaderWin #theList .item .fileDiv .fileSize{width: 70px;display: inline-block; }
+#uploaderWin #theList .item .fileDiv .filePro{width: 150px;display: inline-block; }
+#uploaderWin #theList .item .fileDiv .fileSize,#uploaderWin #theList .item .fileDiv .filePro{
+	clear:both;
+	margin-left: 35px;
+}
+#uploaderWin #theList .item .rogressDiv{
+		width: 0%;
+		height: 41px;
+		background-color: #abd7fb;
+		opacity:0.5;
+		position: absolute;
+		top: 0px;
+		z-index: 0;
+}
+#uploaderWin #theList .item .fileDiv,#uploaderWin #theList .item .fileImg{z-index: 50; }
+
+
+#uploaderWin #theList .item .fileClose{
+	width: 16px;
+	height: 16px;
+	background: url(../images/sprite_n1_ccdf642.png) 0 0 no-repeat;
+	background-position: 0 -269px;
+	cursor: pointer;
+	position: absolute;
+	right: 30px;
+	top:14px;
+	z-index: 1;
+}
+#uploaderWin #theList .item .fileClose:HOVER { background-position: -21px -269px; }

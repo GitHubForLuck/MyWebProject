@@ -1,0 +1,52 @@
+/**
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
+CKEDITOR.editorConfig = function( config ) {
+    // Define changes to default configuration here.
+    // For complete reference see:
+    // http://docs.ckeditor.com/#!/api/CKEDITOR.config
+
+    // The toolbar groups arrangement, optimized for two toolbar rows.
+    config.language = 'zh-cn';
+    config.toolbar_Full = [
+        ['Source','-','Save','NewPage','Preview','-','Templates'],
+        ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+        ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+        ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
+        '/',
+        ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+        ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+        ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+        ['Link','Unlink','Anchor'],
+        ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],
+        '/',
+        ['Styles','Format','Font','FontSize'],
+        ['TextColor','BGColor']
+    ];
+
+    // Remove some buttons provided by the standard plugins, which are
+    // not needed in the Standard(s) toolbar.
+    //字体默认大小
+    config.fontSize_defaultLabel = '14px';
+    //字体编辑时可选的字体大小
+    config.fontSize_sizes ='14/14px;16/16px;18/18px;20/20px;22/22px;24/24px;26/26px;28/28px;36/36px;48/48px;72/72px'
+
+    config.removeButtons = 'Underline,Subscript,Superscript';
+
+    // Set the most common block elements.
+    config.format_tags = 'p;h1;h2;h3;pre';
+
+    // Simplify the dialog windows.
+    config.removeDialogTabs = 'image:advanced;link:advanced';
+
+    // 取消 “拖拽以改变尺寸”功能 plugins/resize/plugin.js
+    config.resize_enabled = false;
+
+    // 设置宽高
+    config.height = 400;
+    //指定一个类对上传的图片文件进行处理
+    config.filebrowserImageUploadUrl = "/management/image/uploadForCK";
+    config.image_previewText = '这里是预览';
+};
